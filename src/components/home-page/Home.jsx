@@ -242,7 +242,7 @@ const Home = () => {
           <a href="/">
             <img
               className="img-fluid w-100"
-              src={"/images/home-page/mothers-day.webp"}
+              src={"/images/home-page/mother's-day.webp"}
               alt=""
             />
           </a>
