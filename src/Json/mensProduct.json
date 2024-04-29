@@ -1,0 +1,86 @@
+[
+    {
+        "id" : 1,
+        "image" :"public/images/products/product-1.webp",
+        "title" : "Hoka",
+        "text" : "Stinson All Terrain 6 Running Shoe (Men)",
+        "price" : "$89.97"
+    },
+    {
+        "id" : 2,
+        "image" :"public/images/products/product-2.webp",
+        "title" : "Original Penguin",
+        "text" : "Single Breasted Two Button Sport Coat",
+        "price" : "$149.97"
+    },
+    {
+        "id" : 3,
+        "image" :"public/images/products/product-3.webp",
+        "title" : "Black Clover",
+        "text" : "Seamless Luck 2 Baseball Cap",
+        "price" : "$19.97"
+    },
+    {
+        "id" : 4,
+        "image" :"public/images/products/product-4.webp",
+        "title" : "RIOT SOCIETY",
+        "text" : "Seamless Luck 2 Baseball Cap",
+        "price" : "$16.97"
+    },
+    {
+        "id" : 5,
+        "image" :"public/images/products/product-5.webp",
+        "title" : "CONSTRUCT",
+        "text" : "Floral Stretch Short Sleeve Button-Down Shirt",
+        "price" : "$29.97"
+    },
+    {
+        "id" : 6,
+        "image" :"public/images/products/product-6.webp",
+        "title" : "PORSAMO BLEU",
+        "text" : "Charlie Multifunction Bracelet Strap Watch, 45mm",
+        "price" : "$269.97"
+    },
+    {
+        "id" : 7,
+        "image" :"public/images/products/product-7.webp",
+        "title" : "PORSAMO BLEU",
+        "text" : "Charlie Multifunction Bracelet Strap Watch, 45mm",
+        "price" : "$269.97"
+    },
+    {
+        "id" : 8,
+        "image" :"public/images/products/product-8.webp",
+        "title" : "PORSAMO BLEU",
+        "text" : "Charlie Multifunction Bracelet Strap Watch, 45mm",
+        "price" : "$269.97"
+    },
+    {
+        "id" : 9,
+        "image" :"public/images/products/product-9.webp",
+        "title" : "PORSAMO BLEU",
+        "text" : "Charlie Multifunction Bracelet Strap Watch, 45mm",
+        "price" : "$269.97"
+    },
+    {
+        "id" : 10,
+        "image" :"public/images/products/product-10.webp",
+        "title" : "PORSAMO BLEU",
+        "text" : "Charlie Multifunction Bracelet Strap Watch, 45mm",
+        "price" : "$269.97"
+    },
+    {
+        "id" : 11,
+        "image" :"public/images/products/product-11.webp",
+        "title" : "PORSAMO BLEU",
+        "text" : "Charlie Multifunction Bracelet Strap Watch, 45mm",
+        "price" : "$269.97"
+    },
+    {
+        "id" : 12,
+        "image" :"public/images/products/product-12.webp",
+        "title" : "PORSAMO BLEU",
+        "text" : "Charlie Multifunction Bracelet Strap Watch, 45mm",
+        "price" : "$269.97"
+    }
+]
