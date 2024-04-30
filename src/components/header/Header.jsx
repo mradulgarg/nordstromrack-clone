@@ -961,16 +961,16 @@ const navBarDropdown = [
       <ul>
         <li><h5 className="mb-0"><a href="/">New: Get Inspired</a></h5></li>
         <li><hr className="my-2"></hr></li>
-        <li><h6><a href="/">Top 100 Deals</a></h6></li>
-        <li><h6><a href="/">25% Off Selected Bony Levy Diamond Jewelry</a></h6></li>
-        <li><h6><a href="/">Badgley Mischka Diamonds Up to 70% Off</a></h6></li>
-        <li><h6><a href="/">New Markdowns Up to 75% Off</a></h6></li>
-        <li><h6><a href="/">Nordstrom Rack Exclusive: MICHELE Watches</a></h6></li>
-        <li><h6><a href="/">Our Top Picks</a></h6></li>
-        <li><h6><a href="/">New from Nordstrom​</a></h6></li>
-        <li><h6><a href="/">New Limited-Time Sales</a></h6></li>
-        <li><h6><a href="/">New Under $25</a></h6></li>
-        <li><h6><a href="/">New Store Openings</a></h6></li>
+        <li><h6><a href="/mensproduct">Top 100 Deals</a></h6></li>
+        <li><h6><a href="/mensproduct">25% Off Selected Bony Levy Diamond Jewelry</a></h6></li>
+        <li><h6><a href="/mensproduct">Badgley Mischka Diamonds Up to 70% Off</a></h6></li>
+        <li><h6><a href="/mensproduct">New Markdowns Up to 75% Off</a></h6></li>
+        <li><h6><a href="/mensproduct">Nordstrom Rack Exclusive: MICHELE Watches</a></h6></li>
+        <li><h6><a href="/mensproduct">Our Top Picks</a></h6></li>
+        <li><h6><a href="/mensproduct">New from Nordstrom​</a></h6></li>
+        <li><h6><a href="/mensproduct">New Limited-Time Sales</a></h6></li>
+        <li><h6><a href="/mensproduct">New Under $25</a></h6></li>
+        <li><h6><a href="/mensproduct">New Store Openings</a></h6></li>
       </ul>
       </div>
       <div className="col-2">
@@ -1244,7 +1244,6 @@ const Header = () => {
                     </Space>
                   </a>
                 </Dropdown>
-                {/* <a href="">Women</a> */}
               </li>
               <li>
               <Dropdown
@@ -1260,7 +1259,6 @@ const Header = () => {
                     </Space>
                   </a>
                 </Dropdown>
-                {/* <a href="">Men</a> */}
               </li>
               <li>
               <Dropdown
@@ -1276,7 +1274,6 @@ const Header = () => {
                     </Space>
                   </a>
                 </Dropdown>
-                {/* <a href="">Kids</a> */}
               </li>
               <li>
               <Dropdown
@@ -1292,7 +1289,6 @@ const Header = () => {
                     </Space>
                   </a>
                 </Dropdown>
-                {/* <a href="">Shoes</a> */}
               </li>
               <li>
               <Dropdown
@@ -1308,7 +1304,6 @@ const Header = () => {
                     </Space>
                   </a>
                 </Dropdown>
-                {/* <a href="">Bags & Accessories</a> */}
               </li>
               <li>
               <Dropdown
@@ -1324,7 +1319,6 @@ const Header = () => {
                     </Space>
                   </a>
                 </Dropdown>
-                {/* <a href="">Home</a> */}
               </li>
               <li>
               <Dropdown
@@ -1340,7 +1334,6 @@ const Header = () => {
                     </Space>
                   </a>
                 </Dropdown>
-                {/* <a href="">Beauty</a> */}
               </li>
               <li>
               <Dropdown
@@ -1356,7 +1349,6 @@ const Header = () => {
                     </Space>
                   </a>
                 </Dropdown>
-                {/* <a href="">Gift Guide</a> */}
               </li>
               <li>
               <Dropdown
@@ -1372,7 +1364,6 @@ const Header = () => {
                     </Space>
                   </a>
                 </Dropdown>
-                {/* <a href="">Flash Events</a> */}
               </li>
             </ul>
           </div>

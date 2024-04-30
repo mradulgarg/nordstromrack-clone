@@ -37,6 +37,7 @@ nav .search .search-input input {
 
 .navbar-brand img {
   width: 132px;
+  margin-left: 15px;
 }
 
 .cart-count {

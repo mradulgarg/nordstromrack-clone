@@ -1,22 +1,13 @@
 import { Flex,  SimpleGrid, Text } from "@chakra-ui/react";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { mensProducts } from "../Json/mensProduct";
 
 const MensProductPage = () => {
-  const [data, setData] = useState([]);
+  const data = mensProducts;
   const [sortedData, setSortedData] = useState([]);
   const [sortBy, setSortBy] = useState("");
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        let res = await axios.get("src/Json/mensProduct.json");
-        setData(res.data);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    fetchData();
-  }, []);
+  
   useEffect(() => {
     if (sortBy === "desc") {
       setSortedData([...data].sort((a, b) =>  (a.price) -  (b.price)));
@@ -32,7 +23,7 @@ const MensProductPage = () => {
       <Flex>
       
         <SimpleGrid gridTemplateColumns={"repeat(4,1fr)"} ml={10} gap={20} w={"60%"} mt={6}>
-          {sortedData.map((elem) => (
+          {data.map((elem) => (
             <SimpleGrid  key={elem.id} cursor={"pointer"} borderRadius={10} w={300} boxShadow="xs" rounded="md">
                
               <img src={elem.image} alt="" />

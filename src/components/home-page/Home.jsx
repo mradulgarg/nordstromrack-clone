@@ -4,14 +4,6 @@ import { Carousel } from "antd";
 import { Button, Modal } from "antd";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 
-// const contentStyle = {
-//   height: "160px",
-//   color: "#fff",
-//   lineHeight: "160px",
-//   textAlign: "center",
-//   background: "#364d79",
-// };
-
 const SampleNextArrow = (props) => {
   const { className, style, onClick } = props;
   return (
@@ -93,20 +85,39 @@ const Home = () => {
   const [open, setOpen] = useState(false);
   const [confirmLoading, setConfirmLoading] = useState(false);
   const [modalText, setModalText] = useState("Content of the modal");
+  const [signedIn, setSignedIn] = useState(false); // State to track sign-in status
+
+  useEffect(() => {
+    // Check if user is already signed in from local storage
+    const isSignedIn = localStorage.getItem("signedIn");
+    if (isSignedIn === "true") {
+      setSignedIn(true);
+    }
+  }, []);
+
   const showModal = () => {
     setOpen(true);
   };
+
   const handleOk = () => {
     setModalText("The modal will be closed after two seconds");
     setConfirmLoading(true);
     setTimeout(() => {
       setOpen(false);
       setConfirmLoading(false);
+      setSignedIn(true); // Update sign-in status
+      localStorage.setItem("signedIn", "true"); // Store sign-in status in local storage
     }, 2000);
   };
+
   const handleCancel = () => {
     console.log("Clicked cancel button");
     setOpen(false);
+  };
+
+  const handleSignOut = () => {
+    setSignedIn(false); // Update sign-in status
+    localStorage.removeItem("signedIn"); // Remove sign-in status from local storage
   };
 
   const vidRef = useRef();
@@ -132,71 +143,81 @@ const Home = () => {
   return (
     <div className="main">
       <Container>
-        <div className="d-flex flex-column align-items-center log-in mb-5">
-          <div className="heading">
-            <h4>
-              <strong>More to Rack, easier and faster.</strong>
-            </h4>
+        {/* Sign In Button */}
+        {!signedIn && (
+          <div className="d-flex flex-column align-items-center log-in mb-5">
+            <div className="heading">
+              <h4>
+                <strong>More to Rack, easier and faster.</strong>
+              </h4>
+            </div>
+            <div className="">
+              <Button
+                type="primary"
+                className="sign-in-btn rounded-0 mt-3"
+                onClick={showModal}
+              >
+                Sign In or Create an Account
+              </Button>
+              <Modal
+                open={open}
+                onOk={handleOk}
+                confirmLoading={confirmLoading}
+                onCancel={handleCancel}
+                footer={null}
+              >
+                <h3><b>Sign in</b></h3>
+                <p>New to Nordstrom Rack?<a href="/signin"> Create an account.</a></p>
+                <form>
+                  <div className="form__controls mt-4">
+                    <label htmlFor="username"><b>Email</b></label>
+                    <input
+                      type="text"
+                      id="username"
+                      className="rounded-0"
+                    />
+                  </div>
+                  <div className="form__controls mt-2 position-relative">
+                    <label htmlFor="password"><b>Password</b>
+                    </label>
+                    <input
+                      type="password"
+                      id="password"
+                      className="rounded-0"
+                    />
+                  </div>
+                  <div className="form__controls mt-2 d-flex align-items-center">
+                    <input
+                      type="checkbox"
+                      id="keepSignedIn"
+                      className="rounded-0 me-2"
+                    />
+                    <label className="fw-normal mb-0" htmlFor="keepSignedIn">
+                      Keep me signed in <a href="/"> Details</a>
+                    </label>
+                  </div>
+                  <span className="tc-span mt-4" alt="account check message">
+                    By creating an account, you agree to our <a href="/"> Privacy Policy</a>  and <a href="/"> Terms &
+                    Conditions.</a>
+                  </span>
+                  <div className="form__controls">
+                    <button className="button w-100 rounded-0 mt-4" type="submit">Sign In</button>
+                  </div>
+                </form> 
+              </Modal>
+            </div>
           </div>
-          <div className="">
-            <Button
-              type="primary"
-              className="sign-in-btn rounded-0 mt-3"
-              onClick={showModal}
-            >
-              Sign In or Create an Account
+        )}
+
+        {/* Sign Out Button */}
+        {signedIn && (
+          <div className="d-flex justify-content-end mb-3">
+            <Button type="primary" onClick={handleSignOut}>
+              Sign Out
             </Button>
-            <Modal
-              open={open}
-              onOk={handleOk}
-              confirmLoading={confirmLoading}
-              onCancel={handleCancel}
-              footer={null}
-            >
-              <h3><b>Sign in</b></h3>
-             <p>New to Nordstrom Rack?<a href="/signin"> Create an account.</a></p>
-             <form>
-             <div className="form__controls mt-4">
-          <label htmlFor="username"><b>Email</b></label>
-          <input
-            type="text"
-            id="username"
-            className="rounded-0"
-            
-          />
-        </div>
-          <div className="form__controls mt-2 position-relative">
-            <label htmlFor="password"><b>Password</b>
-            </label>
-            <input
-              type="password"
-              id="password"
-              className="rounded-0"
-            />
           </div>
-          <div className="form__controls mt-2 d-flex align-items-center">
-            <input
-              type="checkbox"
-              id="keepSignedIn"
-              className="rounded-0 me-2"
-              
-            />
-            <label className="fw-normal mb-0" htmlFor="keepSignedIn">
-              Keep me signed in <a href="/"> Details</a>
-            </label>
-          </div>
-          <span className="tc-span mt-4" alt="account check message">
-            By creating an account, you agree to our <a href="/"> Privacy Policy</a>  and <a href="/"> Terms &
-            Conditions.</a>
-          </span>
-          <div className="form__controls">
-            <button className="button w-100 rounded-0 mt-4" type="submit">Sign In</button>
-          </div>
-              
-            </form> 
-            </Modal>
-          </div>
-        </div>
+        )}
+
         <div className="gif-div mb-5 pt-3">
           <a href="/">
             <img
