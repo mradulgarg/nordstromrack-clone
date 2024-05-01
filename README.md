@@ -3,7 +3,7 @@
 ## Experience it Yourself! 🛍️
 
 Welcome to the Nordstromrack online website! Dive into an amazing shopping experience with unbeatable deals on fashion, accessories, and home decor.
-## 🌐 [Visit Website](https://nordstromrack-clone-project.netlify.app/mensproduct)
+## 🌐 [Visit Website](https://nordstromrack-clone-project.netlify.app)
 
 ## About Nordstromrack 🛒
 
