@@ -9,6 +9,8 @@ Welcome to the Nordstromrack online website! Dive into an amazing shopping exper
 
 Since 1973, Nordstromrack has been your destination for the very best deals every day. We pride ourselves on delivering great brands at great prices, offering a wide range of products including clothes, shoes, accessories, and home decor. With 90% of the brands offered at Rack being the very same brands you'll find at Nordstrom, you can trust that we provide quality items and new trends, styles, and staples delivered weekly.
 
+## Features 🌟
+
 - **Home Page:** Explore the latest deals and offerings.
 - **Sign Up and Create Account Page:** Join the Nordstromrack community and enjoy exclusive member-only deals.
 - **Product Page:** Discover a wide range of products at amazing prices.
