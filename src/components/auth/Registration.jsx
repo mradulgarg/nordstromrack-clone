@@ -1,7 +1,8 @@
+import { Button } from "antd";
 import  { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
-const Registration = () => {
+const Registration = ({login}) => {
  const location = useLocation();
  const username = location.state;
 
@@ -10,6 +11,7 @@ const Registration = () => {
  const [firstName, setFirstName] = useState("");
  const [lastName, setLastName] = useState("");
  const [keepSignedIn, setKeepSignedIn] = useState(false);
+ const navigate = useNavigate();
 
  const togglePasswordVisibility = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
@@ -26,11 +28,16 @@ const Registration = () => {
     localStorage.setItem("keepSignedIn", JSON.stringify(keepSignedIn)); // Store boolean as string
 
     alert("Account created successfully!");
-
-    // Optionally, redirect or perform other actions after storing data
-    // For example, redirect to a login page
-    // window.location.href = "/login";
+    login();
+    navigate("/mensproduct");
+    
  };
+
+  const isValid = () => {
+      if (!username || !firstName || !lastName || !password){
+        return true;
+      }
+  }
 
  return (
     <div>
@@ -163,7 +170,7 @@ const Registration = () => {
             Conditions.
           </span>
           <div className="form__controls">
-            <button className="button w-100 rounded-0 mt-4" type="submit" href="/">Create Account</button>
+            <button disabled = {isValid()} className="button w-100 rounded-0 mt-4" type="submit" href="/">Create Account</button>
             
             
            

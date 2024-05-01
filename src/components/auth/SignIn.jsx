@@ -15,6 +15,12 @@ const SignIn = () => {
     navigate("/registration", { state: { username } });
   };
 
+  const isValid = () => {
+    if (!username){
+      return true;
+    }
+  }
+
   return (
     <div className="sign-in-form">
       <form className="form__container pt-3 mb-5">
@@ -39,6 +45,7 @@ const SignIn = () => {
         <div className="form__controls">
           {/* <Link to={{ pathname: "/registration", state: { email } }}> */}
           <Button
+            disabled={isValid()}
             type="primary"
             className="button w-100 rounded-0 mt-4"
             onClick={handleClick}

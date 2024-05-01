@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Input } from "antd";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { SearchOutlined } from "@ant-design/icons";
 import { CaretDownOutlined } from "@ant-design/icons";
 import { Dropdown, Space, message } from "antd";
@@ -951,118 +951,398 @@ const cart_dropdown = [
   },
 ];
 
-const navBarDropdown = [
-  {
-    key: "1",
-    label: (
-      
-      <div className="d-flex navbar-dropdown">
-        <div className="col-2">
-      <ul>
-        <li><h5 className="mb-0"><a href="/">New: Get Inspired</a></h5></li>
-        <li><hr className="my-2"></hr></li>
-        <li><h6><a href="/mensproduct">Top 100 Deals</a></h6></li>
-        <li><h6><a href="/mensproduct">25% Off Selected Bony Levy Diamond Jewelry</a></h6></li>
-        <li><h6><a href="/mensproduct">Badgley Mischka Diamonds Up to 70% Off</a></h6></li>
-        <li><h6><a href="/mensproduct">New Markdowns Up to 75% Off</a></h6></li>
-        <li><h6><a href="/mensproduct">Nordstrom Rack Exclusive: MICHELE Watches</a></h6></li>
-        <li><h6><a href="/mensproduct">Our Top Picks</a></h6></li>
-        <li><h6><a href="/mensproduct">New from Nordstrom​</a></h6></li>
-        <li><h6><a href="/mensproduct">New Limited-Time Sales</a></h6></li>
-        <li><h6><a href="/mensproduct">New Under $25</a></h6></li>
-        <li><h6><a href="/mensproduct">New Store Openings</a></h6></li>
-      </ul>
-      </div>
-      <div className="col-2">
-      <ul>
-        <li><h5><a href="/">All New Arrivals</a></h5></li>
-        <li><a href="/mensproduct">Women</a></li>
-        <li><a href="/mensproduct">Men</a></li>
-        <li><a href="/mensproduct">Kids</a></li>
-        <li><a href="/mensproduct">Shoes</a></li>
-        <li><a href="/mensproduct">Bages & Accessories</a></li>
-        <li><a href="/mensproduct">Home</a></li>
-        <li><a href="/mensproduct">Beauty​</a></li>
-        </ul>
-
-        <ul>
-        <li><h5><a href="/">New in Contemporary</a></h5></li>
-        <li><h5><a href="/">New in Dresses</a></h5></li>
-        <li><h5><a href="/">New in Luggage</a></h5></li>
-        <li><h5><a href="/">New in Sandals</a></h5></li>
-        <li><h5><a href="/">New in Sunglasses</a></h5></li>
-        <li><h5><a href="/">New in Swim</a></h5></li>
-        </ul>
-        </div>
-        
-        <div className="col-2">
-      
-      <ul>
-      <li><h5><a href="/">New from Our Top Brands</a></h5></li>
-        <li><a href="/">AllSaints</a></li>
-        <li><a href="/">Dr. Martens</a></li>
-        <li><a href="/">Dyson</a></li>
-        <li><a href="/">Faherty</a></li>
-        <li><a href="/">Free People</a></li>
-        <li><a href="/">Karl Lagerfeld Paris</a></li>
-        <li><a href="/">Marc Jacobs​</a></li>
-        <li><a href="/">Nike</a></li>
-        <li><a href="/">Stuart Weitzman​</a></li>
-        <li><a href="/">Tommy Bahama​</a></li>
-      </ul>
-      </div>
-      <div className="col-2">
-      <ul>
-      <li><h5><a href="/">New This Season</a></h5></li>
-        <li><a href="/">Accessories Edit</a></li>
-        <li><a href="/">Denim Edit</a></li>
-        <li><a href="/">Dress Edit</a></li>
-        <li><a href="/">Festival Must Haves</a></li>
-        <li><a href="/">KBeauty</a></li>
-        <li><a href="/">Mother's Day Dress Up</a></li>
-        <li><a href="/">Mother's Day Gifts​</a></li>
-        <li><a href="/">Prom Shop</a></li>
-        <li><a href="/">Sandal Edit</a></li>
-        <li><a href="/">Spring Occasion​</a></li>
-        <li><a href="/">Surf & Skate​</a></li>
-        <li><a href="/">Trending Now: Flats​</a></li>
-        <li><a href="/">Warm Weather Shop​</a></li>
-        </ul>
-      <ul>
-        <li><h5><a href="/">Spring Essentials for Her</a></h5></li>
-        <li><h5><a href="/">Spring Essentials for Him</a></h5></li>
-        <li><h5><a href="/">Spring Essentials for Kids</a></h5></li>
-
-      </ul>
-      </div>
-      <div className="col-2 pe-2">
-      <ul>
-      <li><h5><a href="/">New This Week</a></h5></li>
-        <li><a href="/">Sale: 25% Off Selected Bony Levy Diamond Jewelry</a></li>
-        <li><a href="/">Sam Edelman Up to 60% Off</a></li>
-        <li><a href="/">New-In Savvy Cie Jewels Up to 70% Off</a></li>
-        <li><a href="/">Stuart Weitzman Shoes Up to 60% Off</a></li>
-        <li><a href="/">New Handbags & More Up to 55% Off Feat. AllSaints</a></li>
-        <li><a href="/">Kate Spade New York Handbags & More Up to 65% Off</a></li>
-        <li><a href="/">Badgley Mischka Shoes & More Up to 50% Off​</a></li>
-        <li><a href="/">Kids Hurley Up to 50% Off</a></li>
-      </ul>
-      </div>
-      <div className="col-2 ">
-        <a href="/"><img src="/images/header/navbar-dropdown-img.webp" alt="" className="img-fluid w-100" /></a>
-        <a href="/">Shop New Arrivals</a>
-      </div>
-      </div>
-      
-    ),
-    className: "sign_in_btn",
-    style: { backgroundColor: "transparent" },
-
-  },
-
-]
-
 const Header = () => {
+  const navigate = useNavigate();
+  const navBarDropdown = [
+    {
+      key: "1",
+      label: (
+        <div className="d-flex navbar-dropdown">
+          <div className="col-2">
+            <ul>
+              <li>
+                <h5 className="mb-0">
+                  <a href="/">New: Get Inspired</a>
+                </h5>
+              </li>
+              <li>
+                <hr className="my-2"></hr>
+              </li>
+              <li>
+                <h6>
+                  <a
+                    onClick={() => {
+                      navigate("/mensproduct");
+                    }}
+                  >
+                    Top 100 Deals
+                  </a>
+                </h6>
+              </li>
+              <li>
+                <h6>
+                  <a
+                    onClick={() => {
+                      navigate("/mensproduct");
+                    }}
+                  >
+                    25% Off Selected Bony Levy Diamond Jewelry
+                  </a>
+                </h6>
+              </li>
+              <li>
+                <h6>
+                  <a
+                    onClick={() => {
+                      navigate("/mensproduct");
+                    }}
+                  >
+                    Badgley Mischka Diamonds Up to 70% Off
+                  </a>
+                </h6>
+              </li>
+              <li>
+                <h6>
+                  <a
+                    onClick={() => {
+                      navigate("/mensproduct");
+                    }}
+                  >
+                    New Markdowns Up to 75% Off
+                  </a>
+                </h6>
+              </li>
+              <li>
+                <h6>
+                  <a
+                    onClick={() => {
+                      navigate("/mensproduct");
+                    }}
+                  >
+                    Nordstrom Rack Exclusive: MICHELE Watches
+                  </a>
+                </h6>
+              </li>
+              <li>
+                <h6>
+                  <a
+                    onClick={() => {
+                      navigate("/mensproduct");
+                    }}
+                  >
+                    Our Top Picks
+                  </a>
+                </h6>
+              </li>
+              <li>
+                <h6>
+                  <a
+                    onClick={() => {
+                      navigate("/mensproduct");
+                    }}
+                  >
+                    New from Nordstrom​
+                  </a>
+                </h6>
+              </li>
+              <li>
+                <h6>
+                  <a
+                    onClick={() => {
+                      navigate("/mensproduct");
+                    }}
+                  >
+                    New Limited-Time Sales
+                  </a>
+                </h6>
+              </li>
+              <li>
+                <h6>
+                  <a
+                    onClick={() => {
+                      navigate("/mensproduct");
+                    }}
+                  >
+                    New Under $25
+                  </a>
+                </h6>
+              </li>
+              <li>
+                <h6>
+                  <a
+                    onClick={() => {
+                      navigate("/mensproduct");
+                    }}
+                  >
+                    New Store Openings
+                  </a>
+                </h6>
+              </li>
+            </ul>
+          </div>
+          <div className="col-2">
+            <ul>
+              <li>
+                <h5>
+                  <a href="/">All New Arrivals</a>
+                </h5>
+              </li>
+              <li>
+                <a
+                  onClick={() => {
+                    navigate("/mensproduct");
+                  }}
+                >
+                  Women
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => {
+                    navigate("/mensproduct");
+                  }}
+                >
+                  Men
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => {
+                    navigate("/mensproduct");
+                  }}
+                >
+                  Kids
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => {
+                    navigate("/mensproduct");
+                  }}
+                >
+                  Shoes
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => {
+                    navigate("/mensproduct");
+                  }}
+                >
+                  Bages & Accessories
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => {
+                    navigate("/mensproduct");
+                  }}
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => {
+                    navigate("/mensproduct");
+                  }}
+                >
+                  Beauty​
+                </a>
+              </li>
+            </ul>
+
+            <ul>
+              <li>
+                <h5>
+                  <a href="/">New in Contemporary</a>
+                </h5>
+              </li>
+              <li>
+                <h5>
+                  <a href="/">New in Dresses</a>
+                </h5>
+              </li>
+              <li>
+                <h5>
+                  <a href="/">New in Luggage</a>
+                </h5>
+              </li>
+              <li>
+                <h5>
+                  <a href="/">New in Sandals</a>
+                </h5>
+              </li>
+              <li>
+                <h5>
+                  <a href="/">New in Sunglasses</a>
+                </h5>
+              </li>
+              <li>
+                <h5>
+                  <a href="/">New in Swim</a>
+                </h5>
+              </li>
+            </ul>
+          </div>
+
+          <div className="col-2">
+            <ul>
+              <li>
+                <h5>
+                  <a href="/">New from Our Top Brands</a>
+                </h5>
+              </li>
+              <li>
+                <a href="/">AllSaints</a>
+              </li>
+              <li>
+                <a href="/">Dr. Martens</a>
+              </li>
+              <li>
+                <a href="/">Dyson</a>
+              </li>
+              <li>
+                <a href="/">Faherty</a>
+              </li>
+              <li>
+                <a href="/">Free People</a>
+              </li>
+              <li>
+                <a href="/">Karl Lagerfeld Paris</a>
+              </li>
+              <li>
+                <a href="/">Marc Jacobs​</a>
+              </li>
+              <li>
+                <a href="/">Nike</a>
+              </li>
+              <li>
+                <a href="/">Stuart Weitzman​</a>
+              </li>
+              <li>
+                <a href="/">Tommy Bahama​</a>
+              </li>
+            </ul>
+          </div>
+          <div className="col-2">
+            <ul>
+              <li>
+                <h5>
+                  <a href="/">New This Season</a>
+                </h5>
+              </li>
+              <li>
+                <a href="/">Accessories Edit</a>
+              </li>
+              <li>
+                <a href="/">Denim Edit</a>
+              </li>
+              <li>
+                <a href="/">Dress Edit</a>
+              </li>
+              <li>
+                <a href="/">Festival Must Haves</a>
+              </li>
+              <li>
+                <a href="/">KBeauty</a>
+              </li>
+              <li>
+                <a href="/">Mother's Day Dress Up</a>
+              </li>
+              <li>
+                <a href="/">Mother's Day Gifts​</a>
+              </li>
+              <li>
+                <a href="/">Prom Shop</a>
+              </li>
+              <li>
+                <a href="/">Sandal Edit</a>
+              </li>
+              <li>
+                <a href="/">Spring Occasion​</a>
+              </li>
+              <li>
+                <a href="/">Surf & Skate​</a>
+              </li>
+              <li>
+                <a href="/">Trending Now: Flats​</a>
+              </li>
+              <li>
+                <a href="/">Warm Weather Shop​</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <h5>
+                  <a href="/">Spring Essentials for Her</a>
+                </h5>
+              </li>
+              <li>
+                <h5>
+                  <a href="/">Spring Essentials for Him</a>
+                </h5>
+              </li>
+              <li>
+                <h5>
+                  <a href="/">Spring Essentials for Kids</a>
+                </h5>
+              </li>
+            </ul>
+          </div>
+          <div className="col-2 pe-2">
+            <ul>
+              <li>
+                <h5>
+                  <a href="/">New This Week</a>
+                </h5>
+              </li>
+              <li>
+                <a href="/">Sale: 25% Off Selected Bony Levy Diamond Jewelry</a>
+              </li>
+              <li>
+                <a href="/">Sam Edelman Up to 60% Off</a>
+              </li>
+              <li>
+                <a href="/">New-In Savvy Cie Jewels Up to 70% Off</a>
+              </li>
+              <li>
+                <a href="/">Stuart Weitzman Shoes Up to 60% Off</a>
+              </li>
+              <li>
+                <a href="/">
+                  New Handbags & More Up to 55% Off Feat. AllSaints
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  Kate Spade New York Handbags & More Up to 65% Off
+                </a>
+              </li>
+              <li>
+                <a href="/">Badgley Mischka Shoes & More Up to 50% Off​</a>
+              </li>
+              <li>
+                <a href="/">Kids Hurley Up to 50% Off</a>
+              </li>
+            </ul>
+          </div>
+          <div className="col-2 ">
+            <a href="/">
+              <img
+                src="/images/header/navbar-dropdown-img.webp"
+                alt=""
+                className="img-fluid w-100"
+              />
+            </a>
+            <a href="/">Shop New Arrivals</a>
+          </div>
+        </div>
+      ),
+      className: "sign_in_btn",
+      style: { backgroundColor: "transparent" },
+    },
+  ];
   return (
     <>
       <div className="col-12 notification-bar py-2 px-5">
@@ -1201,167 +1481,200 @@ const Header = () => {
           <div className="row">
             <ul className="d-flex site-navigation-ul py-3">
               <li>
-              <Dropdown
+                <Dropdown
                   menu={{
-                    items:navBarDropdown,
+                    items: navBarDropdown,
                   }}
-                  overlayStyle={{ width: "fit-content", left: "0", right: "0", margin: "0 auto"  }}
-                  trigger={'click'}
+                  overlayStyle={{
+                    width: "fit-content",
+                    left: "0",
+                    right: "0",
+                    margin: "0 auto",
+                  }}
+                  trigger={"click"}
                 >
                   <a onClick={(e) => e.preventDefault()}>
-                    <Space>
-                      New
-                    </Space>
+                    <Space>New</Space>
                   </a>
                 </Dropdown>
               </li>
               <li>
-              <Dropdown
+                <Dropdown
                   menu={{
-                    items:navBarDropdown,
+                    items: navBarDropdown,
                   }}
-                  overlayStyle={{ width: "fit-content", left: "0", right: "0", margin: "0 auto"  }}
-                  trigger={'click'}
+                  overlayStyle={{
+                    width: "fit-content",
+                    left: "0",
+                    right: "0",
+                    margin: "0 auto",
+                  }}
+                  trigger={"click"}
                 >
                   <a onClick={(e) => e.preventDefault()}>
-                    <Space>
-                    Clearance
-                    </Space>
+                    <Space>Clearance</Space>
                   </a>
                 </Dropdown>
               </li>
               <li>
-              <Dropdown
+                <Dropdown
                   menu={{
-                    items:navBarDropdown,
+                    items: navBarDropdown,
                   }}
-                  overlayStyle={{ width: "fit-content", left: "0", right: "0", margin: "0 auto"  }}
-                  trigger={'click'}
+                  overlayStyle={{
+                    width: "fit-content",
+                    left: "0",
+                    right: "0",
+                    margin: "0 auto",
+                  }}
+                  trigger={"click"}
                 >
                   <a onClick={(e) => e.preventDefault()}>
-                    <Space>
-                    Women
-                    </Space>
+                    <Space>Women</Space>
                   </a>
                 </Dropdown>
               </li>
               <li>
-              <Dropdown
+                <Dropdown
                   menu={{
-                    items:navBarDropdown,
+                    items: navBarDropdown,
                   }}
-                  overlayStyle={{ width: "fit-content", left: "0", right: "0", margin: "0 auto"  }}
-                  trigger={'click'}
+                  overlayStyle={{
+                    width: "fit-content",
+                    left: "0",
+                    right: "0",
+                    margin: "0 auto",
+                  }}
+                  trigger={"click"}
                 >
                   <a onClick={(e) => e.preventDefault()}>
-                    <Space>
-                    Men
-                    </Space>
+                    <Space>Men</Space>
                   </a>
                 </Dropdown>
               </li>
               <li>
-              <Dropdown
+                <Dropdown
                   menu={{
-                    items:navBarDropdown,
+                    items: navBarDropdown,
                   }}
-                  overlayStyle={{ width: "fit-content", left: "0", right: "0", margin: "0 auto"  }}
-                  trigger={'click'}
+                  overlayStyle={{
+                    width: "fit-content",
+                    left: "0",
+                    right: "0",
+                    margin: "0 auto",
+                  }}
+                  trigger={"click"}
                 >
                   <a onClick={(e) => e.preventDefault()}>
-                    <Space>
-                    Kids
-                    </Space>
+                    <Space>Kids</Space>
                   </a>
                 </Dropdown>
               </li>
               <li>
-              <Dropdown
+                <Dropdown
                   menu={{
-                    items:navBarDropdown,
+                    items: navBarDropdown,
                   }}
-                  overlayStyle={{ width: "fit-content", left: "0", right: "0", margin: "0 auto"  }}
-                  trigger={'click'}
+                  overlayStyle={{
+                    width: "fit-content",
+                    left: "0",
+                    right: "0",
+                    margin: "0 auto",
+                  }}
+                  trigger={"click"}
                 >
                   <a onClick={(e) => e.preventDefault()}>
-                    <Space>
-                    Shoes
-                    </Space>
+                    <Space>Shoes</Space>
                   </a>
                 </Dropdown>
               </li>
               <li>
-              <Dropdown
+                <Dropdown
                   menu={{
-                    items:navBarDropdown,
+                    items: navBarDropdown,
                   }}
-                  overlayStyle={{ width: "fit-content", left: "0", right: "0", margin: "0 auto"  }}
-                  trigger={'click'}
+                  overlayStyle={{
+                    width: "fit-content",
+                    left: "0",
+                    right: "0",
+                    margin: "0 auto",
+                  }}
+                  trigger={"click"}
                 >
                   <a onClick={(e) => e.preventDefault()}>
-                    <Space>
-                    Bags & Accessories
-                    </Space>
+                    <Space>Bags & Accessories</Space>
                   </a>
                 </Dropdown>
               </li>
               <li>
-              <Dropdown
+                <Dropdown
                   menu={{
-                    items:navBarDropdown,
+                    items: navBarDropdown,
                   }}
-                  overlayStyle={{ width: "fit-content", left: "0", right: "0", margin: "0 auto"  }}
-                  trigger={'click'}
+                  overlayStyle={{
+                    width: "fit-content",
+                    left: "0",
+                    right: "0",
+                    margin: "0 auto",
+                  }}
+                  trigger={"click"}
                 >
                   <a onClick={(e) => e.preventDefault()}>
-                    <Space>
-                    Home
-                    </Space>
+                    <Space>Home</Space>
                   </a>
                 </Dropdown>
               </li>
               <li>
-              <Dropdown
+                <Dropdown
                   menu={{
-                    items:navBarDropdown,
+                    items: navBarDropdown,
                   }}
-                  overlayStyle={{ width: "fit-content", left: "0", right: "0", margin: "0 auto"  }}
-                  trigger={'click'}
+                  overlayStyle={{
+                    width: "fit-content",
+                    left: "0",
+                    right: "0",
+                    margin: "0 auto",
+                  }}
+                  trigger={"click"}
                 >
                   <a onClick={(e) => e.preventDefault()}>
-                    <Space>
-                    Beauty
-                    </Space>
+                    <Space>Beauty</Space>
                   </a>
                 </Dropdown>
               </li>
               <li>
-              <Dropdown
+                <Dropdown
                   menu={{
-                    items:navBarDropdown,
+                    items: navBarDropdown,
                   }}
-                  overlayStyle={{ width: "fit-content", left: "0", right: "0", margin: "0 auto"  }}
-                  trigger={'click'}
+                  overlayStyle={{
+                    width: "fit-content",
+                    left: "0",
+                    right: "0",
+                    margin: "0 auto",
+                  }}
+                  trigger={"click"}
                 >
                   <a onClick={(e) => e.preventDefault()}>
-                    <Space>
-                    Gift Guide
-                    </Space>
+                    <Space>Gift Guide</Space>
                   </a>
                 </Dropdown>
               </li>
               <li>
-              <Dropdown
+                <Dropdown
                   menu={{
-                    items:navBarDropdown,
+                    items: navBarDropdown,
                   }}
-                  overlayStyle={{ width: "fit-content", left: "0", right: "0", margin: "0 auto"  }}
-                  trigger={'click'}
+                  overlayStyle={{
+                    width: "fit-content",
+                    left: "0",
+                    right: "0",
+                    margin: "0 auto",
+                  }}
+                  trigger={"click"}
                 >
                   <a onClick={(e) => e.preventDefault()}>
-                    <Space>
-                    Flash Events
-                    </Space>
+                    <Space>Flash Events</Space>
                   </a>
                 </Dropdown>
               </li>

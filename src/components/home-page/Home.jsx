@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import { Carousel } from "antd";
 import { Button, Modal } from "antd";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
+import { useNavigate } from "react-router-dom";
 
 const SampleNextArrow = (props) => {
   const { className, style, onClick } = props;
@@ -81,11 +82,14 @@ const ProductCard = ({ src, alt, text, subText }) => (
   </div>
  );  
 
-const Home = () => {
+const Home = ({login}) => {
   const [open, setOpen] = useState(false);
   const [confirmLoading, setConfirmLoading] = useState(false);
   const [modalText, setModalText] = useState("Content of the modal");
-  const [signedIn, setSignedIn] = useState(false); // State to track sign-in status
+  const [signedIn, setSignedIn] = useState(false); 
+  const [username, setUsername] = useState("");
+  const [Password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Check if user is already signed in from local storage
@@ -119,6 +123,31 @@ const Home = () => {
     setSignedIn(false); // Update sign-in status
     localStorage.removeItem("signedIn"); // Remove sign-in status from local storage
   };
+
+  const isValid = () => {
+    if (!username || !Password){
+      return true;
+    }
+  }
+
+  const signIn = () => {
+    const storedEmail = localStorage.getItem("username");
+    const storedPassword = localStorage.getItem("password");
+
+    console.log(storedEmail, storedPassword, username, Password)
+
+    if (username == storedEmail && Password == storedPassword) {
+      alert("Login successful!");
+      login()
+      navigate("/mensproduct");
+  
+    } else {
+      alert("Incorrect email or password.");
+    }
+  };
+
+
+ 
 
   const vidRef = useRef();
 
@@ -172,6 +201,8 @@ const Home = () => {
                   <div className="form__controls mt-4">
                     <label htmlFor="username"><b>Email</b></label>
                     <input
+                    value={username}
+                    onChange={(e)=>setUsername(e.target.value)}
                       type="text"
                       id="username"
                       className="rounded-0"
@@ -181,6 +212,8 @@ const Home = () => {
                     <label htmlFor="password"><b>Password</b>
                     </label>
                     <input
+                    value={Password}
+                    onChange={(e)=>setPassword(e.target.value)}
                       type="password"
                       id="password"
                       className="rounded-0"
@@ -201,7 +234,7 @@ const Home = () => {
                     Conditions.</a>
                   </span>
                   <div className="form__controls">
-                    <button className="button w-100 rounded-0 mt-4" type="submit">Sign In</button>
+                    <button disabled={isValid()} onClick={signIn} className="button w-100 rounded-0 mt-4" type="submit">Sign In</button>
                   </div>
                 </form> 
               </Modal>

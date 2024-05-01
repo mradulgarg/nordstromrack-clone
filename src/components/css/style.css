@@ -597,11 +597,11 @@ footer .footer-links .important-links ul li .privacy-rights-icon {
   height: 40px;
 }
 
-.button:hover {
+/* .button:hover {
   background: #094ebe none;
   border-color: #094ebe;
   color: #fff;
-}
+} */
 
 .register-form svg:nth-child(1n) path {
   fill: none;
