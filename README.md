@@ -29,7 +29,7 @@ Since 1973, Nordstromrack has been your destination for the very best deals ever
 
 ---
 
-## Home Page
+## Images 🖼️
 
 Welcome to the Nordstromrack home page! Discover the latest deals on fashion, accessories, and home decor. Whether you're shopping for yourself or your family, Nordstromrack has something for everyone at unbeatable prices.
 
