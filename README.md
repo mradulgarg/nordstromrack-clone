@@ -33,7 +33,8 @@ Since 1973, Nordstromrack has been your destination for the very best deals ever
 
 Welcome to the Nordstromrack home page! Discover the latest deals on fashion, accessories, and home decor. Whether you're shopping for yourself or your family, Nordstromrack has something for everyone at unbeatable prices.
 
-![Home Page](nordstromrack-clone\src\assets\Home.png)
+![Home Page](![image](https://github.com/mradulgarg/nordstromrack-clone/assets/81671161/89b36492-a5fd-4b53-967e-8a64b1b4c577)
+
 
 ---
 
