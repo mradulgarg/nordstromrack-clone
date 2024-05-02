@@ -33,7 +33,7 @@ Since 1973, Nordstromrack has been your destination for the very best deals ever
 
 Welcome to the Nordstromrack home page! Discover the latest deals on fashion, accessories, and home decor. Whether you're shopping for yourself or your family, Nordstromrack has something for everyone at unbeatable prices.
 
-[Home Page](nordstromrack-clone\src\assets\Home.png)
+![Home Page](src\assets\Home.png)
 
 
 ---
@@ -42,7 +42,7 @@ Welcome to the Nordstromrack home page! Discover the latest deals on fashion, ac
 
 Join the Nordstromrack community by signing up and creating your account. Enjoy exclusive access to member-only deals and promotions.
 
-[Create Account Page](nordstromrack-clone\src\assets\createAccount.png)
+![Create Account Page](src\assets\createAccount.png)
 
 ---
 
@@ -50,7 +50,7 @@ Join the Nordstromrack community by signing up and creating your account. Enjoy 
 
 Already have an account? Sign in to access your saved preferences, order history, and more.
 
-[Sign In Page](nordstromrack-clone\src\assets\Signin.png)
+![Sign In Page](src\assets\Signin.png)
 
 ---
 
@@ -58,4 +58,4 @@ Already have an account? Sign in to access your saved preferences, order history
 
 Explore a wide range of products at amazing prices on the Nordstromrack Product Page.
 
-[Product Page](nordstromrack-clone\src\assets\Product.png)
+![Product Page](src\assets\Product.png)
