@@ -59,3 +59,15 @@ Already have an account? Sign in to access your saved preferences, order history
 Explore a wide range of products at amazing prices on the Nordstromrack Product Page.
 
 ![Product Page](src/assets/Product.png)
+
+## Getting Started 🚀
+To run the nordstromrack-clone project locally, follow these steps:
+1. Clone the repository to your local machine.
+2. Install dependencies using npm.
+3. Start the development server.
+
+## Contributing 🤝
+Contributions from the community are welcome. Feel free to submit pull requests with new features or improvements.
+
+## Acknowledgments 🙏
+Thank you for exploring the Costco clone project! Enjoy your shopping experience. 🛍️
